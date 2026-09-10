@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atalhos do Visual Studio Code</title>
+	<style>
+		:root { --bg: #0d1117; --card: #161b22; --line: #30363d; --text: #e6edf3; --muted: #8b949e; --blue: #58a6ff; }
+		* { box-sizing: border-box; }
+		body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--text); background: radial-gradient(circle at top, #17243a, var(--bg) 48%); }
+		header { padding: 56px 20px 36px; text-align: center; }
+		.badge { color: var(--blue); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
+		h1 { margin: 10px 0; font-size: clamp(2rem, 5vw, 3.5rem); }
+		header p { max-width: 620px; margin: auto; color: var(--muted); font-size: 1.05rem; }
+		main { max-width: 1100px; margin: auto; padding: 0 20px 50px; }
+		.search { width: 100%; padding: 15px 18px; margin: 10px 0 28px; border: 1px solid var(--line); border-radius: 10px; background: #0d1117; color: var(--text); font-size: 1rem; outline: none; }
+		.search:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #58a6ff25; }
+		.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+		section { padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: #161b22dd; box-shadow: 0 10px 30px #0003; }
+		h2 { margin: 0 0 15px; font-size: 1.15rem; color: #fff; }
+		ul { list-style: none; padding: 0; margin: 0; }
+		li { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 11px 0; border-bottom: 1px solid #30363d88; color: var(--muted); }
+		li:last-child { border-bottom: 0; padding-bottom: 0; }
+		kbd { white-space: nowrap; padding: 4px 8px; border: 1px solid #484f58; border-bottom-width: 2px; border-radius: 6px; color: var(--text); background: #21262d; font: 700 .78rem ui-monospace, SFMono-Regular, monospace; }
+		footer { text-align: center; color: var(--muted); padding: 5px 20px 30px; font-size: .85rem; }
+		.hidden { display: none; }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="badge">Guia rápido</div>
+		<h1>Atalhos do VS Code</h1>
+		<p>Consulte os principais atalhos para editar, navegar e trabalhar com mais produtividade no Visual Studio Code.</p>
+	</header>
+	<main>
+		<input class="search" type="search" placeholder="Pesquisar um atalho..." aria-label="Pesquisar atalhos">
+		<div class="grid">
+			<section><h2>Edição</h2><ul>
+				<li>Desfazer <kbd>Ctrl + Z</kbd></li><li>Refazer <kbd>Ctrl + Y</kbd></li><li>Copiar linha <kbd>Shift + Alt + ↓</kbd></li><li>Mover linha <kbd>Alt + ↑ / ↓</kbd></li><li>Comentar linha <kbd>Ctrl + /</kbd></li><li>Formatar documento <kbd>Shift + Alt + F</kbd></li>
+			</ul></section>
+			<section><h2>Navegação</h2><ul>
+				<li>Paleta de comandos <kbd>Ctrl + Shift + P</kbd></li><li>Ir para arquivo <kbd>Ctrl + P</kbd></li><li>Ir para linha <kbd>Ctrl + G</kbd></li><li>Ir para símbolo <kbd>Ctrl + Shift + O</kbd></li><li>Alternar editor <kbd>Ctrl + 1 / 2 / 3</kbd></li><li>Fechar editor <kbd>Ctrl + W</kbd></li>
+			</ul></section>
+			<section><h2>Pesquisa e seleção</h2><ul>
+				<li>Localizar <kbd>Ctrl + F</kbd></li><li>Substituir <kbd>Ctrl + H</kbd></li><li>Localizar no projeto <kbd>Ctrl + Shift + F</kbd></li><li>Selecionar ocorrência <kbd>Ctrl + D</kbd></li><li>Selecionar todas <kbd>Ctrl + Shift + L</kbd></li><li>Expandir seleção <kbd>Shift + Alt + →</kbd></li>
+			</ul></section>
+			<section><h2>Visualização</h2><ul>
+				<li>Terminal integrado <kbd>Ctrl + `</kbd></li><li>Explorador <kbd>Ctrl + Shift + E</kbd></li><li>Controle de código-fonte <kbd>Ctrl + Shift + G</kbd></li><li>Extensões <kbd>Ctrl + Shift + X</kbd></li><li>Dividir editor <kbd>Ctrl + \</kbd></li><li>Zen Mode <kbd>Ctrl + K, Z</kbd></li>
+			</ul></section>
+			<section><h2>Depuração</h2><ul>
+				<li>Iniciar depuração <kbd>F5</kbd></li><li>Parar depuração <kbd>Shift + F5</kbd></li><li>Executar sem depurar <kbd>Ctrl + F5</kbd></li><li>Breakpoint <kbd>F9</kbd></li><li>Continuar <kbd>F5</kbd></li><li>Passo a passo <kbd>F10</kbd></li>
+			</ul></section>
+			<section><h2>Arquivos</h2><ul>
+				<li>Salvar <kbd>Ctrl + S</kbd></li><li>Salvar tudo <kbd>Ctrl + K, S</kbd></li><li>Novo arquivo <kbd>Ctrl + N</kbd></li><li>Abrir pasta <kbd>Ctrl + K, Ctrl + O</kbd></li><li>Reabrir editor fechado <kbd>Ctrl + Shift + T</kbd></li><li>Renomear símbolo <kbd>F2</kbd></li>
+			</ul></section>
+		</div>
+	</main>
+	<footer>Os atalhos podem variar conforme o sistema operacional. Esta lista usa o padrão Windows/Linux.</footer>
+	<script>
+		const campo = document.querySelector('.search');
+		const itens = document.querySelectorAll('li');
+		campo.addEventListener('input', () => {
+			const termo = campo.value.toLowerCase();
+			itens.forEach(item => item.classList.toggle('hidden', !item.textContent.toLowerCase().includes(termo)));
+		});
+	</script>
+</body>
+</html>
